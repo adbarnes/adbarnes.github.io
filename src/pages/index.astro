@@ -1,39 +1,97 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Divider from "../components/Divider.astro";
+
+import portImageUbi from "../images/port-web-ubi.png";
+import portImageMpp from "../images/port-web-mpp.png";
+import portImageTA from "../images/port-web-ta.png";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+  title="Creative and versatile UI Designer/Developer _ "
+  subTitle="with 20 years experience on a variety of digital design projects including marketing websites, SASS apps, graphic design and design for print."
+>
   <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
+    <Divider variant="section" sectionNumber="01" heading="What I do" />
 
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
+    <p>
+      I’m a passionate and creative web/ui designer/developer with a keen eye
+      for design. Coming from a Web design background gives great flexibility,
+      taking designs from ideation through to development.
+    </p>
+    <section>
+      <Divider
+        variant="subSection"
+        sectionNumber="01.1"
+        heading="Web design and development"
       />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
+      <ul>
+        <li>Responsive desktop and mobile design</li>
+        <li>Colour</li>
+        <li>Typography and Layouts</li>
+        <li>Semantic HTML coding</li>
+        <li>SASS & CSS</li>
+        <li>JS React</li>
+      </ul>
+    </section>
+    <section>
+      <Divider
+        variant="subSection"
+        sectionNumber="01.2"
+        heading="UX/UI Design"
       />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
+      <ul>
+        <li>Design thinking</li>
+        <li>Ideation</li>
+        <li>Prototyping</li>
+        <li>Semantic HTML coding</li>
+        <li>Design systems</li>
+        <li>Accessibility</li>
+      </ul>
+    </section>
+    <section>
+      <Divider
+        variant="subSection"
+        sectionNumber="01.3"
+        heading="Graphic Design"
       />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
+      <ul>
+        <li>Flyer & Poster design</li>
+        <li>Logos</li>
+        <li>Web banners</li>
+        <li>Brochure design</li>
+      </ul>
+    </section>
+    <Divider variant="section" sectionNumber="02" heading="Work" />
+    <section>
+      <Divider
+        variant="subSection"
+        sectionNumber="02.1"
+        heading="Web dev and UI design"
       />
-    </ul>
+      <ul role="list" class="link-card-grid">
+        <Card
+          title="ubisend"
+          body="UI/UX DESIGN & DEVELOPMENT"
+          href="#"
+          imgSrc={portImageUbi}
+        />
+        <Card
+          title="Mypinpad"
+          body="UI/UX DESIGN & DEVELOPMENT"
+          href="#"
+          imgSrc={portImageMpp}
+        />
+        <Card
+          title="TextAnywhere"
+          body="UI/UX DESIGN & DEVELOPMENT"
+          href="#"
+          imgSrc={portImageTA}
+        />
+      </ul>
+      <a href="#">Older works</a>
+    </section>
   </main>
 </Layout>
 
@@ -43,11 +101,37 @@ import Card from "../components/Card.astro";
     padding: 1rem;
     width: 1248px;
     max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
+
+    font-size: 1.5rem;
     line-height: 1.6;
   }
-  .astro-a {
+
+  ul {
+    list-style-type: none;
+  }
+
+  li:before {
+    content: "+";
+    margin-right: 4px;
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+  /* section {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  section p {
+    width: 50%;
+  } */
+
+  /* .astro-a {
     position: absolute;
     top: -32px;
     left: 50%;
@@ -91,10 +175,5 @@ import Card from "../components/Card.astro";
   .instructions strong {
     color: rgb(var(--accent-light));
   }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
-    padding: 0;
-  }
+   */
 </style>
