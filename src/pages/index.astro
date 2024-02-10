@@ -6,6 +6,10 @@ import Divider from "../components/Divider.astro";
 import portImageUbi from "../images/port-web-ubi.png";
 import portImageMpp from "../images/port-web-mpp.png";
 import portImageTA from "../images/port-web-ta.png";
+
+import portImageCru from "../images/port-graphic-cru.jpg";
+import portImageCons from "../images/port-graphic-cons.jpg";
+import portImageBc from "../images/port-graphic-bc.jpg";
 ---
 
 <Layout
@@ -92,6 +96,50 @@ import portImageTA from "../images/port-web-ta.png";
       </ul>
       <a href="#">Older works</a>
     </section>
+    <section>
+      <Divider
+        variant="subSection"
+        sectionNumber="02.1"
+        heading="Graphic design"
+      />
+      <ul role="list" class="link-card-grid">
+        <Card
+          title="The Crucible"
+          body="Poster design"
+          href="#"
+          imgSrc={portImageCru}
+        />
+        <Card
+          title="Constellations"
+          body="Poster design"
+          href="#"
+          imgSrc={portImageCons}
+        />
+        <Card
+          title="Breathing Corpses"
+          body="Poster design"
+          href="#"
+          imgSrc={portImageBc}
+        />
+      </ul>
+      <a href="#">Older works</a>
+    </section>
+    <Divider variant="section" sectionNumber="03" heading="Experince" />
+    <section>
+      <table>
+        <tr><td>ubisend</td><td>UI/UX Developer</td><td>Oct 2022 -</td></tr>
+        <tr
+          ><td>mypinpad</td><td>UI/UX Developer</td><td
+            >Nov 2020 - Oct 2022
+          </td></tr
+        >
+        <tr
+          ><td>TextAnywhere</td><td>Web Designer</td><td
+            >Aug 2007 - July 2020</td
+          ></tr
+        >
+      </table>
+    </section>
   </main>
 </Layout>
 
@@ -119,6 +167,13 @@ import portImageTA from "../images/port-web-ta.png";
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 2rem;
     padding: 0;
+  }
+
+  table {
+    width: 100%;
+  }
+  td {
+    border-bottom: 1px solid black;
   }
   /* section {
     padding: 3rem;
