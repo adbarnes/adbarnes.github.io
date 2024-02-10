@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
@@ -21,10 +22,11 @@ const { title, subTitle } = Astro.props;
   </head>
   <body>
     <Header title={title} subTitle={subTitle} />
-
     <slot />
+    <Footer />
   </body>
 </html>
+
 <style is:global>
   :root {
     --accent: 136, 58, 234;
