@@ -2,12 +2,12 @@
 import Navigation from "./Navigation.astro";
 import Hero from "../components/Hero.astro";
 
-const { title, subTitle } = Astro.props;
+const { title, subTitle, headerImgSrc } = Astro.props;
 ---
 
 <header>
   <nav>
     <Navigation />
   </nav>
-  <Hero title={title} subTitle={subTitle} />
+  <Hero title={title} subTitle={subTitle} headerImgSrc={headerImgSrc} />
 </header>

@@ -1,19 +1,26 @@
 ---
+import { Picture } from "astro:assets";
+
 interface Props {
   title: string;
   subTitle: string;
+
+  headerImgSrc?: ImageMetadata;
 }
 
-const { title, subTitle } = Astro.props;
+const { title, subTitle, headerImgSrc } = Astro.props;
 ---
 
 <div class="hero-container">
   <h1>
     {title}
   </h1>
-  <p>
-    {subTitle}
-  </p>
+  <div class="container">
+    {headerImgSrc && <Picture class="intro-img" src={headerImgSrc} alt="" />}
+    <p>
+      {subTitle}
+    </p>
+  </div>
 </div>
 
 <style>
@@ -21,17 +28,34 @@ const { title, subTitle } = Astro.props;
     text-align: center;
     padding: 3rem;
 
+    max-width: calc(1248px - 2rem);
+    margin: auto;
+
     h1 {
       font-size: 5rem;
       max-width: 1045px;
       margin-inline-start: auto;
       margin-inline-end: auto;
+      word-wrap: break-word;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .intro-img {
+      height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    display: flex;
+  }
     }
 
     p {
       margin: auto;
       max-width: 880px;
       font-size: 2.5rem;
+      padding: 1rem;
     }
   }
 </style>
