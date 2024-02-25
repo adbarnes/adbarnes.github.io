@@ -1,0 +1,61 @@
+---
+import { Picture } from "astro:assets";
+
+import Layout from "../../layouts/Layout.astro";
+
+import portImageUbi from "../../images/port-web-ubi.png";
+---
+
+<Layout
+  title="ubisend "
+  subTitle="Crafting seamless experiences through user-centric design, implementing robust design systems, and revolutionizing core UI with major redesigns..."
+  hasHeaderImg={true}
+  headerImgSrc={portImageUbi}
+>
+  <section class="section-is-large mb-6">
+    <div class="columns">
+      <div class="column"><Picture src={portImageUbi} alt="ubisend" /></div>
+      <div class="column content">
+        <h2 class="title is-2">Figma design system</h2>
+        <p>
+          One of the first tasks I undertook as Ubsiend was to implement a figma
+          design system using their existing React components.
+        </p>
+        <ul>
+          <li>32 reusable components with variations</li>
+          <li>Typography, Colour and Icon linked libraries</li>
+          <li>Advanced prototypes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section-is-large">
+    <div class="columns reverse-columns">
+      <div class="column content">
+        <h2 class="title is-2">Complete redesign of Workflow builder</h2>
+        <p>
+          Another task invloved a major visual and functional overhaul the
+          workflow builder.
+        </p>
+        <ul>
+          <li>This is the first item</li>
+          <li>This is the second item</li>
+          <li>This is the third item</li>
+        </ul>
+      </div>
+      <div class="column"><Picture src={portImageUbi} alt="ubisend" /></div>
+    </div>
+    <div>
+      <p>During</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @media screen and (max-width: 769px) {
+    .reverse-columns {
+      flex-direction: column-reverse;
+      display: flex;
+    }
+  }
+</style>
