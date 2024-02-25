@@ -20,7 +20,10 @@ const { title, subTitle, hasHeaderImg, headerImgSrc } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -64,6 +67,10 @@ const { title, subTitle, hasHeaderImg, headerImgSrc } = Astro.props;
 
         font-size: 1.5rem;
         line-height: 1.6;
+      }
+
+      .container {
+        margin-bottom: 1rem;
       }
       /* code {
     font-family:
