@@ -22,25 +22,45 @@ import { fade } from "astro:transitions";
   <main>
     <section transition:animate={fade({ duration: "0.4s" })}>
       <Divider variant="section" sectionNumber="01" heading="What I do" />
-
-      <p>
-        I’m a passionate and creative web/ui designer/developer with a keen eye
-        for design. Coming from a Web design background gives great flexibility,
-        taking designs from ideation through to development.
-      </p>
+      <div class="content">
+        <p>
+          I am a creative and versatile Web Designer/Developer with 20 years
+          experience on a variety of digital design projects including marketing
+          websites, acessible app UIs and scaleable design systems.
+        </p>
+        <p>
+          My mutli-disciplined skillset gives me the advantage of being able to
+          take a project from ideation, through design, prototyping and
+          development. I am equally at home in Figma, designing and prototyping
+          as I am developing functional, semantic React web components.
+        </p>
+        <p>
+          I always work to a high standard and pride myself on being
+          approachable, motivated and enthusiastic, with an excellent attention
+          to detail.
+        </p>
+        <p>
+          For the last 4 years, I have been part of a small, successful teams at
+          MyPinPad and more recently ubisend, where I am a UX/UI Developer,
+          working on their AI chatbot platform.
+        </p>
+      </div>
       <section>
         <Divider
           variant="subSection"
           sectionNumber="01.1"
           heading="Web design and development"
         />
-        <ul>
-          <li>Responsive desktop and mobile design</li>
-          <li>Colour</li>
-          <li>Typography and Layouts</li>
-          <li>Semantic HTML coding</li>
+        <ul class="skills-list">
+          <li>Responsive desktop and mobile UI design</li>
+          <li>WCAG Accessibility</li>
+          <li>Animation</li>
+          <li>Semantic HTML</li>
           <li>SASS & CSS</li>
-          <li>JS React</li>
+          <li>Wordpress</li>
+          <li>Javascript</li>
+          <li>React JS</li>
+          <li>Tests</li>
         </ul>
       </section>
       <section>
@@ -49,12 +69,14 @@ import { fade } from "astro:transitions";
           sectionNumber="01.2"
           heading="UX/UI Design"
         />
-        <ul>
+        <ul class="skills-list">
           <li>Design thinking</li>
+          <li>Typography and Layouts</li>
           <li>Ideation</li>
           <li>Prototyping</li>
           <li>Semantic HTML coding</li>
           <li>Design systems</li>
+          <li>Colour Theory</li>
           <li>Accessibility</li>
         </ul>
       </section>
@@ -64,7 +86,7 @@ import { fade } from "astro:transitions";
           sectionNumber="01.3"
           heading="Graphic Design"
         />
-        <ul>
+        <ul class="skills-list">
           <li>Flyer & Poster design</li>
           <li>Logos</li>
           <li>Web banners</li>
@@ -143,8 +165,23 @@ import { fade } from "astro:transitions";
           </td></tr
         >
         <tr
-          ><td>TextAnywhere</td><td>Web Designer</td><td
+          ><td>TextAnywhere</td><td>UI/UX Developer</td><td
             >Aug 2007 - July 2020</td
+          ></tr
+        >
+        <tr
+          ><td>ODS Business Services</td><td>Multimedia Developer</td><td
+            >Apr 2006 - July 2007</td
+          ></tr
+        >
+        <tr
+          ><td>Newsquest Digital Media</td><td>Web Designer</td><td
+            >Nov 2004 - Apr 2006</td
+          ></tr
+        >
+        <tr
+          ><td>Business Website</td><td>Web Designer</td><td
+            >Apr 2003 - Nov 2004</td
           ></tr
         >
       </table>
@@ -189,6 +226,20 @@ import { fade } from "astro:transitions";
   }
   section {
     margin: 3rem 0;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skills-list li {
+    display: flex;
+    background-color: #333a3f;
+    border-radius: 80px;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
   }
   /* 
 
