@@ -1,23 +1,31 @@
 ---
 // Component Imports
-import Hero from "../../components/Hero.jsx";
+import Hero3d from "../../components/Hero3d.jsx";
 
 import { Picture } from "astro:assets";
 
 import Layout from "../../layouts/Layout.astro";
 
 import portImageUbi from "../../images/port-web-ubi.png";
+import portImageUbiComps from "../../images/port-web-ubi-comps.png";
+import portImageUbiUi from "../../images/port-web-ubi-ui.png";
 ---
 
 <Layout
   title="ubisend "
-  subTitle="Crafting seamless experiences through user-centric design, implementing robust design systems, and revolutionizing core UI with major redesigns..."
+  subTitle="Crafting seamless UX through user-centric design, implementing robust design systems, and core UI changes with major redesigns..."
   hasHeaderImg={true}
-  headerImgSrc={portImageUbi}
->
-  <section class="section-is-large mb-6">
+  variant="Hori"
+  headerImgSrc={portImageUbi}>
+  <section class="section-is-large mb-6 pb-6">
     <div class="columns">
-      <div class="column"><Picture src={portImageUbi} alt="ubisend" /></div>
+      <div class="column">
+        <Picture
+          class="box py-6"
+          src={portImageUbiComps}
+          alt="ubisend"
+        />
+      </div>
       <div class="column content">
         <h2 class="title is-2">Figma design system</h2>
         <p>
@@ -27,7 +35,7 @@ import portImageUbi from "../../images/port-web-ubi.png";
         <ul>
           <li>32 reusable components with variations</li>
           <li>Typography, Colour and Icon linked libraries</li>
-          <li>Advanced prototypes</li>
+          <li>Advanced, usable prototypes</li>
         </ul>
       </div>
     </div>
@@ -37,16 +45,22 @@ import portImageUbi from "../../images/port-web-ubi.png";
       <div class="column content">
         <h2 class="title is-2">Complete redesign of Workflow builder</h2>
         <p>
-          Another task invloved a major visual and functional overhaul the
+          Another task involved a major visual and functional overhaul the
           workflow builder.
         </p>
         <ul>
-          <li>This is the first item</li>
-          <li>This is the second item</li>
-          <li>This is the third item</li>
+          <li>WCAG Accessibility</li>
+          <li>Complete UI rework</li>
+          <li>Refined UX flow</li>
         </ul>
       </div>
-      <div class="column"><Picture src={portImageUbi} alt="ubisend" /></div>
+      <div class="column">
+        <Picture
+          class="box"
+          src={portImageUbiUi}
+          alt="ubisend"
+        />
+      </div>
     </div>
   </section>
 </Layout>
@@ -59,4 +73,3 @@ import portImageUbi from "../../images/port-web-ubi.png";
     }
   }
 </style>
-../../components/Counter.jsx ../../components/Hero.jsx

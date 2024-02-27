@@ -17,22 +17,32 @@ import { fade } from "astro:transitions";
 <Layout
   title="Creative and versatile UI Designer/Developer _ "
   subTitle="with 20 years experience on a variety of digital design projects including marketing websites, SASS apps, graphic design and design for print."
-  hasHeaderImg={false}
->
+  hasHeaderImg={true}
+  variant="vertical"
+  headerImgSrc={portImageUbi}>
   <main>
     <section transition:animate={fade({ duration: "0.4s" })}>
-      <Divider variant="section" sectionNumber="01" heading="What I do" />
+      <Divider
+        variant="section"
+        sectionNumber="01"
+        heading="What I do"
+      />
       <div class="content">
         <p>
-          I am a creative and versatile Web Designer/Developer with 20 years
-          experience on a variety of digital design projects including marketing
-          websites, acessible app UIs and scaleable design systems.
+          I am a creative and versatile UI/UX Designer/Developer with 20 years
+          experience on a variety of digital design projects including <span
+            class="has-text-weight-bold"
+            >marketing websites, accessible web apps and scaleable design
+            systems</span
+          >.
         </p>
         <p>
-          My mutli-disciplined skillset gives me the advantage of being able to
-          take a project from ideation, through design, prototyping and
-          development. I am equally at home in Figma, designing and prototyping
-          as I am developing functional, semantic React web components.
+          My <span class="has-text-weight-bold">multi-disciplined skillset</span
+          > gives me the advantage of being able to take a project from ideation,
+          through design, prototyping and development. I am equally at home in <span
+            class="has-text-weight-bold">Figma</span
+          >, designing and prototyping as I am developing functional, semantic
+          <span class="has-text-weight-bold">React</span> web components.
         </p>
         <p>
           I always work to a high standard and pride myself on being
@@ -40,9 +50,9 @@ import { fade } from "astro:transitions";
           to detail.
         </p>
         <p>
-          For the last 4 years, I have been part of a small, successful teams at
-          MyPinPad and more recently ubisend, where I am a UX/UI Developer,
-          working on their AI chatbot platform.
+          I am currenty working at ubisend, as a <span
+            class="has-text-weight-bold">UX/UI Developer</span
+          >, working on their AI chatbot platform.
         </p>
       </div>
       <section>
@@ -58,9 +68,8 @@ import { fade } from "astro:transitions";
           <li>Semantic HTML</li>
           <li>SASS & CSS</li>
           <li>Wordpress</li>
-          <li>Javascript</li>
-          <li>React JS</li>
-          <li>Tests</li>
+          <li>React & JS</li>
+          <li>JS Tests</li>
         </ul>
       </section>
       <section>
@@ -95,7 +104,11 @@ import { fade } from "astro:transitions";
       </section>
     </section>
     <section>
-      <Divider variant="section" sectionNumber="02" heading="Work" />
+      <Divider
+        variant="section"
+        sectionNumber="02"
+        heading="Work"
+      />
       <section>
         <Divider
           variant="subSection"
@@ -103,7 +116,9 @@ import { fade } from "astro:transitions";
           heading="Web dev and UI design"
         />
 
-        <ul role="list" class="link-card-grid">
+        <ul
+          role="list"
+          class="link-card-grid">
           <Card
             title="ubisend"
             body="UI/UX DESIGN & DEVELOPMENT"
@@ -123,7 +138,10 @@ import { fade } from "astro:transitions";
             imgSrc={portImageTA}
           />
         </ul>
-        <Link href="dsds" text="Other work" />
+        <Link
+          href="dsds"
+          text="Other work"
+        />
       </section>
       <section>
         <Divider
@@ -131,7 +149,9 @@ import { fade } from "astro:transitions";
           sectionNumber="02.1"
           heading="Graphic design"
         />
-        <ul role="list" class="link-card-grid">
+        <ul
+          role="list"
+          class="link-card-grid">
           <Card
             title="The Crucible"
             body="Poster design"
@@ -152,10 +172,17 @@ import { fade } from "astro:transitions";
           />
         </ul>
 
-        <Link href="dsds" text="Other work" />
+        <Link
+          href="dsds"
+          text="Other work"
+        />
       </section>
     </section>
-    <Divider variant="section" sectionNumber="03" heading="Experince" />
+    <Divider
+      variant="section"
+      sectionNumber="03"
+      heading="Experince"
+    />
     <section>
       <table>
         <tr><td>ubisend</td><td>UI/UX Developer</td><td>Oct 2022 -</td></tr>
