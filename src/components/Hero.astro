@@ -1,34 +1,48 @@
 ---
 import { Picture } from "astro:assets";
-import Counter from "./Hero";
+import Hero3d from "./Hero3d";
 
 interface Props {
   title: string;
   subTitle: string;
-
+  variant: string;
   headerImgSrc?: ImageMetadata;
 }
 
-const { title, subTitle, headerImgSrc } = Astro.props;
+const { title, subTitle, variant, headerImgSrc } = Astro.props;
 ---
 
 <div class="hero-container">
-  <h1>
+  <h1 class="has-text-weight-semibold">
     {title}
   </h1>
-  <div class="three"><Counter client:load /></div>
-  <div class="container">
-    {headerImgSrc && <Picture class="intro-img" src={headerImgSrc} alt="" />}
-    <p>
-      {subTitle}
-    </p>
-  </div>
+  {
+    variant === "vertical" ? (
+      <>
+        {headerImgSrc && (
+          <div class="three">
+            <Hero3d client:load />
+          </div>
+        )}
+        <p>{subTitle}</p>
+      </>
+    ) : (
+      <div class="container">
+        {headerImgSrc && (
+          <Picture class="intro-img box" src={headerImgSrc} alt="" />
+        )}
+        <p>{subTitle}</p>
+      </div>
+    )
+  }
 </div>
 
 <style>
   .three {
     width: 100%;
     height: 600px;
+    margin: 2rem 0;
+    padding: 1rem 0;
   }
 
   .hero-container {
@@ -48,13 +62,22 @@ const { title, subTitle, headerImgSrc } = Astro.props;
 
     .container {
       display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 769px) {
+      .container {
+        flex-direction: column;
+      }
     }
 
     .intro-img {
       height: auto;
+      width: 600px;
       max-width: 100%;
       object-fit: cover;
       display: flex;
+      margin: auto;
     }
   }
 
