@@ -29,7 +29,11 @@ const { title, subTitle, variant, headerImgSrc } = Astro.props;
     ) : (
       <div class="container">
         {headerImgSrc && (
-          <Picture class="intro-img box" src={headerImgSrc} alt="" />
+          <Picture
+            class="intro-img box"
+            src={headerImgSrc}
+            alt=""
+          />
         )}
         <p>{subTitle}</p>
       </div>
@@ -63,6 +67,8 @@ const { title, subTitle, variant, headerImgSrc } = Astro.props;
     .container {
       display: flex;
       flex-direction: column;
+      padding-bottom: 3rem;
+      border-bottom: 3px solid;
     }
 
     @media screen and (max-width: 769px) {
@@ -73,7 +79,7 @@ const { title, subTitle, variant, headerImgSrc } = Astro.props;
 
     .intro-img {
       height: auto;
-      width: 600px;
+      width: 400px;
       max-width: 100%;
       object-fit: cover;
       display: flex;
