@@ -19,14 +19,27 @@ const { title, subTitle, hasHeaderImg, headerImgSrc, variant } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Astro description"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
     <title>{title}</title>
     <ViewTransitions />
   </head>
@@ -43,21 +56,14 @@ const { title, subTitle, hasHeaderImg, headerImgSrc, variant } = Astro.props;
     </main>
     <Footer />
     <style is:global>
-      /* :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  } */
+      :root {
+        --primary: #333a3f;
+        --background: #f2f2ea;
+      }
       html {
         font-family: system-ui, sans-serif;
-        color: #333;
-        background: #f2f2ea;
+        color: var(--primary);
+        background: var(--background);
         background-size: 224px;
       }
 
@@ -68,23 +74,16 @@ const { title, subTitle, hasHeaderImg, headerImgSrc, variant } = Astro.props;
         max-width: calc(100% - 2rem);
 
         font-size: 1.5rem;
+      }
+
+      ul,
+      table {
         line-height: 1.6;
       }
 
       .container {
         margin-bottom: 1rem;
       }
-      /* code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  } */
     </style>
   </body>
 </html>
