@@ -1,6 +1,6 @@
 ---
 interface Props {
-  sectionNumber: string;
+  sectionNumber?: string;
   variant: string;
   heading: string;
 }
@@ -17,7 +17,7 @@ const { sectionNumber, heading, variant } = Astro.props;
   .container {
     border-bottom: 3px solid #333;
 
-    .span {
+    span {
       font-size: 1.5rem;
     }
     h2 {
