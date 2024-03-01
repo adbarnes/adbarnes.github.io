@@ -1,11 +1,15 @@
 ---
 // Component Imports
+import react from "react";
+import { motion, useScroll } from "framer-motion";
+
 import Divider from "../../components/Divider.astro";
 
 import { Picture } from "astro:assets";
 
 import Layout from "../../layouts/Layout.astro";
 
+// Images
 import portImageUbi from "../../images/port-web-ubi.png";
 import portImageUbiComps from "../../images/port-web-ubi-comps.png";
 import portImageUbiUi from "../../images/port-web-ubi-ui.png";
@@ -20,13 +24,19 @@ import portImageUbiDash from "../../images/port-web-ubi-dash.png";
   hasHeaderImg={true}
   variant="Hori"
   headerImgSrc={portImageUbi}>
-  <section class="section-is-large">
+  <motion.section
+    client:load
+    className="section-is-large"
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.5, duration: 0.5 }}>
     <div class="columns">
       <div class="column">
         <Picture
           class="box"
           src={portImageUbiComps}
-          alt="ubisend"
+          alt="Example label components of different colours"
         />
       </div>
       <div class="column content">
@@ -43,8 +53,14 @@ import portImageUbiDash from "../../images/port-web-ubi-dash.png";
         </ul>
       </div>
     </div>
-  </section>
-  <section class="section-is-large">
+  </motion.section>
+  <motion.section
+    client:load
+    className="section-is-large"
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.5, duration: 0.5 }}>
     <div class="columns reverse-columns">
       <div class="column content">
         <h2 class="title is-2">Redesign of Workflow builder</h2>
@@ -64,18 +80,25 @@ import portImageUbiDash from "../../images/port-web-ubi-dash.png";
         <Picture
           class="box"
           src={portImageUbiUi}
-          alt="ubisend"
+          alt="Workflow builder interface"
         />
       </div>
     </div>
-  </section>
-  <section class="section-is-large">
+  </motion.section>
+  <motion.section
+    client:load
+    client:load
+    className="section-is-large"
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.5, duration: 0.5 }}>
     <div class="columns">
       <div class="column">
         <Picture
           class="box"
           src={portImageUbiRev}
-          alt="ubisend"
+          alt="Bot settings interface"
         />
       </div>
       <div class="column content">
@@ -95,8 +118,15 @@ import portImageUbiDash from "../../images/port-web-ubi-dash.png";
         </ul>
       </div>
     </div>
-  </section>
-  <section class="section-is-large">
+  </motion.section>
+  <motion.section
+    client:load
+    client:load
+    className="section-is-large"
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.5, duration: 0.5 }}>
     <div class="columns reverse-columns">
       <div class="column content">
         <h2 class="title is-2">Redesign of empty state component</h2>
@@ -113,18 +143,24 @@ import portImageUbiDash from "../../images/port-web-ubi-dash.png";
         <Picture
           class="box"
           src={portImageUbiEmpty}
-          alt="ubisend"
+          alt="Various empty state graphics"
         />
       </div>
     </div>
-  </section>
-  <section class="section-is-large">
+  </motion.section>
+  <motion.section
+    client:load
+    className="section-is-large"
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.5, duration: 0.5 }}>
     <div class="columns">
       <div class="column">
         <Picture
           class="box"
           src={portImageUbiDash}
-          alt="ubisend"
+          alt="Dashboard interface displaying sales data and analytics."
         />
       </div>
       <div class="column content">
@@ -141,7 +177,7 @@ import portImageUbiDash from "../../images/port-web-ubi-dash.png";
         </ul>
       </div>
     </div>
-  </section>
+  </motion.section>
   <section>
     <Divider
       variant="subSection"
@@ -205,5 +241,12 @@ import portImageUbiDash from "../../images/port-web-ubi-dash.png";
 
   section {
     margin-bottom: 6rem;
+  }
+
+  .example-container div {
+    background: red;
+    border-radius: 30px;
+    width: 150px;
+    height: 150px;
   }
 </style>
