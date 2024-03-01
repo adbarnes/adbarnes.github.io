@@ -1,0 +1,158 @@
+---
+// Component Imports
+
+import { motion } from "framer-motion";
+
+import Divider from "../../components/Divider.astro";
+
+import { Picture } from "astro:assets";
+
+import Layout from "../../layouts/Layout.astro";
+
+// Images
+import portImageMpp from "../../images/portfolio/dev/port-web-mpp.png";
+import portImageMppHp from "../../images/portfolio/dev/port-web-mpp-hp.jpg";
+import portImageMppSol from "../../images/portfolio/dev/port-web-mpp-sol.jpg";
+---
+
+<Layout
+  title="MyPinPad"
+  subTitle="Designing, coding and maintaining web-based online applications, blogs, marketing websites. "
+  hasHeaderImg={true}
+  variant="Hori"
+  headerImgSrc={portImageMpp}>
+  <motion.section
+    client:load
+    className="section-is-large"
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.5, duration: 0.5 }}>
+    <div class="columns">
+      <div class="column">
+        <Picture
+          class="box"
+          src={portImageMppHp}
+          alt="Mypinpad website screenshot"
+        />
+      </div>
+      <div class="column content">
+        <h2 class="title is-2">Design system</h2>
+        <p>
+          One of the larger tasks I undertook at Mypinpad was to implement a
+          Figma design system.
+        </p>
+        <ul>
+          <li>Reusable components with variations</li>
+          <li>Typography, Colour and Icon linked libraries</li>
+          <li>Advanced, usable prototypes</li>
+          <li>Synced with Storybook components</li>
+        </ul>
+      </div>
+    </div>
+  </motion.section>
+  <motion.section
+    client:load
+    className="section-is-large"
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.5, duration: 0.5 }}>
+    <div class="columns reverse-columns">
+      <div class="column content">
+        <h2 class="title is-2">
+          Prototype and development of branding configurator
+        </h2>
+        <p>
+          UX/UI design for tool for customers to brand their WL application.
+        </p>
+        <ul>
+          <li>Prototyping and design in Figma</li>
+          <li>LIT Storybook components</li>
+          <li>First product to be released to customers</li>
+        </ul>
+      </div>
+      <div class="column">
+        <Picture
+          class="box"
+          src={portImageMppSol}
+          alt="Workflow builder interface"
+        />
+      </div>
+    </div>
+  </motion.section>
+
+  <section>
+    <Divider
+      variant="subSection"
+      heading="Role and Responsibilities"
+    />
+    <div class="content">
+      <ul>
+        <li>
+          Designed and coded mobile-app theming web application UI (using Figma,
+          Storybook, Bootstrap and custom SASS/JS).
+        </li>
+
+        <li>
+          Designed and coded partner portal web application UI(using Figma,
+          Storybook, Bootstrap and custom SASS/JS).
+        </li>
+        <li>
+          Implemented and customised responsive WordPress theme for marketing
+          website.
+        </li>
+        <li>Wireframed and prototyped app UI projects using Figma.</li>
+        <li>Implemented new, unified design system in Figma.</li>
+        <li>
+          Multiple applications UI designed in Figma and built using custom SASS
+          and Bootstrap.
+        </li>
+
+        <li>Application UI implemented using JS Storybook components.</li>
+        <li>
+          Adhered to web standards, compatibility and best practice when
+          designing websites.
+        </li>
+        <li>
+          Troubleshooted and tested responsive layouts on different device
+          viewports.
+        </li>
+
+        <li>
+          Worked in a Git version controlled environment with a Azure deployment
+          pipeline.
+        </li>
+        <li>
+          Optimised all websites to ensure best possible performance, user
+          experience, accessibility and security compliance.
+        </li>
+
+        <li>
+          Liaised with the wider business and stakeholders, prioritising work
+          from across the company and managing expectations.
+        </li>
+      </ul>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @media screen and (max-width: 769px) {
+    .reverse-columns {
+      flex-direction: column-reverse;
+      display: flex;
+    }
+  }
+
+  section {
+    margin-bottom: 6rem;
+  }
+
+  .example-container div {
+    background: red;
+    border-radius: 30px;
+    width: 150px;
+    height: 150px;
+  }
+</style>
