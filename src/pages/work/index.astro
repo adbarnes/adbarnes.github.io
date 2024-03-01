@@ -1,0 +1,174 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
+import Divider from "../../components/Divider.astro";
+import Link from "../../components/Link.astro";
+
+import portImageUbi from "../../images/portfolio/dev/port-web-ubi.png";
+import portImageMpp from "../../images/portfolio/dev/port-web-mpp.png";
+import portImageTA from "../../images/portfolio/dev/port-web-ta.png";
+
+import portImageCru from "../../images/portfolio/graphic/port-graphic-cru.jpg";
+import portImageCons from "../../images/portfolio/graphic/port-graphic-cons.jpg";
+import portImageBc from "../../images/portfolio/graphic/port-graphic-bc.jpg";
+import portImageMsnd from "../../images/portfolio/graphic/port-graphic-msnd.jpg";
+import portImageImpro from "../../images/portfolio/graphic/port-graphic-improv.jpg";
+import portImageTlp from "../../images/portfolio/graphic/port-graphic-tlp.jpg";
+
+import { fade } from "astro:transitions";
+---
+
+<Layout
+  title="Creative and versatile UI Designer/Developer _ "
+  subTitle="with 20 years experience on a variety of digital design projects including marketing websites, SASS apps, graphic design and design for print."
+  hasHeaderImg={true}
+  variant="vertical"
+  headerImgSrc={portImageUbi}>
+  <main>
+    <section>
+      <Divider
+        variant="section"
+        sectionNumber="01"
+        heading="Work"
+      />
+      <section>
+        <Divider
+          variant="subSection"
+          sectionNumber="01.1"
+          heading="Web dev and UI design"
+        />
+
+        <ul
+          role="list"
+          class="link-card-grid">
+          <Card
+            title="ubisend"
+            body="UI/UX DESIGN & DEVELOPMENT"
+            href="/work/web-ubisend"
+            imgSrc={portImageUbi}
+          />
+          <Card
+            title="Mypinpad"
+            body="UI/UX DESIGN & DEVELOPMENT"
+            href="#"
+            imgSrc={portImageMpp}
+          />
+          <Card
+            title="TextAnywhere"
+            body="UI/UX DESIGN & DEVELOPMENT"
+            href="#"
+            imgSrc={portImageTA}
+          /><Card
+            title="ubisend"
+            body="UI/UX DESIGN & DEVELOPMENT"
+            href="/work/web-ubisend"
+            imgSrc={portImageUbi}
+          />
+          <Card
+            title="Mypinpad"
+            body="UI/UX DESIGN & DEVELOPMENT"
+            href="#"
+            imgSrc={portImageMpp}
+          />
+          <Card
+            title="TextAnywhere"
+            body="UI/UX DESIGN & DEVELOPMENT"
+            href="#"
+            imgSrc={portImageTA}
+          />
+        </ul>
+      </section>
+      <section>
+        <Divider
+          variant="subSection"
+          sectionNumber="01.1"
+          heading="Graphic design"
+        />
+        <ul
+          role="list"
+          class="link-card-grid">
+          <Card
+            title="The Crucible"
+            body="Poster design"
+            href="#"
+            imgSrc={portImageCru}
+          />
+          <Card
+            title="Constellations"
+            body="Poster design"
+            href="#"
+            imgSrc={portImageCons}
+          />
+          <Card
+            title="Breathing Corpses"
+            body="Poster design"
+            href="#"
+            imgSrc={portImageBc}
+          />
+          <Card
+            title="A Midsummer Night's Dream"
+            body="Poster design"
+            href=""
+            imgSrc={portImageMsnd}
+          />
+          <Card
+            title="Improv Comedy"
+            body="Poster design"
+            href="#"
+            imgSrc={portImageImpro}
+          />
+          <Card
+            title="The Lost Presents"
+            body="Poster design"
+            href="#"
+            imgSrc={portImageTlp}
+          />
+        </ul>
+      </section>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  ul {
+    list-style-type: none;
+    margin-bottom: 1rem;
+  }
+
+  li:before {
+    content: "+";
+    margin-right: 4px;
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  table {
+    width: 100%;
+  }
+  td {
+    border-bottom: 1px solid black;
+    vertical-align: top;
+  }
+  section {
+    margin: 3rem 0;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skills-list li {
+    display: flex;
+    background-color: var(--primary);
+    border-radius: 80px;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+  }
+</style>
