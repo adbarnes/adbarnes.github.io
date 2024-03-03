@@ -21,7 +21,7 @@ const { title, subTitle, hasHeaderImg, headerImgSrc, variant } = Astro.props;
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Astro description"
+      content="Aaron Barnes Portfolio"
     />
     <meta
       name="viewport"
@@ -32,9 +32,38 @@ const { title, subTitle, hasHeaderImg, headerImgSrc, variant } = Astro.props;
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
     <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png"
+    />
+    <link
       rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="/site.webmanifest"
+    />
+    <link
+      rel="mask-icon"
+      href="/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta
+      name="msapplication-TileColor"
+      content="#da532c"
+    />
+    <meta
+      name="theme-color"
+      content="#ffffff"
     />
     <meta
       name="generator"
@@ -55,6 +84,7 @@ const { title, subTitle, hasHeaderImg, headerImgSrc, variant } = Astro.props;
       <slot />
     </main>
     <Footer />
+
     <style is:global>
       :root {
         --primary: #333a3f;
@@ -69,10 +99,9 @@ const { title, subTitle, hasHeaderImg, headerImgSrc, variant } = Astro.props;
 
       main {
         margin: auto;
-        padding: 1rem;
+
         width: 1248px;
         max-width: calc(100% - 2rem);
-
         font-size: 1.5rem;
       }
 
