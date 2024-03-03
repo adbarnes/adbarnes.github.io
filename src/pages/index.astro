@@ -20,7 +20,7 @@ import { fade } from "astro:transitions";
   hasHeaderImg={true}
   variant="vertical"
   headerImgSrc={portImageUbi}>
-  <main>
+  <main class="p-0">
     <section transition:animate={fade({ duration: "0.4s" })}>
       <Divider
         variant="section"
@@ -121,25 +121,28 @@ import { fade } from "astro:transitions";
           class="link-card-grid">
           <Card
             title="ubisend"
+            alt="ubisend portfolio page"
             body="UI/UX DESIGN & DEVELOPMENT"
             href="/work/web-ubisend"
             imgSrc={portImageUbi}
           />
           <Card
             title="Mypinpad"
+            alt="Mypinpad portfolio page"
             body="UI/UX DESIGN & DEVELOPMENT"
             href="/work/web-mpp"
             imgSrc={portImageMpp}
           />
           <Card
             title="TextAnywhere"
+            alt="TextAnywhere portfolio page"
             body="UI/UX DESIGN & DEVELOPMENT"
             href="/work/web-ta"
             imgSrc={portImageTA}
           />
         </ul>
         <Link
-          href="dsds"
+          href="/work/"
           text="Other work"
         />
       </section>
@@ -154,18 +157,21 @@ import { fade } from "astro:transitions";
           class="link-card-grid">
           <Card
             title="The Crucible"
+            alt="Large version of The Crucible poster"
             body="Poster design"
             href="#"
             imgSrc={portImageCru}
           />
           <Card
             title="Constellations"
+            alt="Large version of Constellations poster"
             body="Poster design"
             href="#"
             imgSrc={portImageCons}
           />
           <Card
             title="Breathing Corpses"
+            alt="Large version of Breathing Corpses poster"
             body="Poster design"
             href="#"
             imgSrc={portImageBc}
@@ -173,7 +179,7 @@ import { fade } from "astro:transitions";
         </ul>
 
         <Link
-          href="dsds"
+          href="/work"
           text="Other work"
         />
       </section>
@@ -226,6 +232,7 @@ import { fade } from "astro:transitions";
     content: "+";
     margin-right: 4px;
   }
+
   .link-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
@@ -237,10 +244,12 @@ import { fade } from "astro:transitions";
   table {
     width: 100%;
   }
+
   td {
     border-bottom: 1px solid black;
     vertical-align: top;
   }
+
   section {
     margin: 3rem 0;
   }

@@ -2,7 +2,6 @@
 import Layout from "../../layouts/Layout.astro";
 import Card from "../../components/Card.astro";
 import Divider from "../../components/Divider.astro";
-import Link from "../../components/Link.astro";
 
 import portImageUbi from "../../images/portfolio/dev/port-web-ubi.png";
 import portImageMpp from "../../images/portfolio/dev/port-web-mpp.png";
@@ -14,6 +13,11 @@ import portImageJob from "../../images/portfolio/dev/port-web-jobsite.jpg";
 
 import portImageVue from "../../images/portfolio/dev/port-web-vue.png";
 import portImageAlp from "../../images/portfolio/dev/port-web-alp.png";
+import portImageLand from "../../images/portfolio/dev/port-web-land.png";
+
+import portImageSign from "../../images/portfolio/dev/port-web-sign.png";
+import portImageSoon from "../../images/portfolio/dev/port-web-soon.png";
+import portImagePrice from "../../images/portfolio/dev/port-web-price.png";
 
 import portImageCru from "../../images/portfolio/graphic/port-graphic-cru.jpg";
 import portImageCons from "../../images/portfolio/graphic/port-graphic-cons.jpg";
@@ -21,23 +25,15 @@ import portImageBc from "../../images/portfolio/graphic/port-graphic-bc.jpg";
 import portImageMsnd from "../../images/portfolio/graphic/port-graphic-msnd.jpg";
 import portImageImpro from "../../images/portfolio/graphic/port-graphic-improv.jpg";
 import portImageTlp from "../../images/portfolio/graphic/port-graphic-tlp.jpg";
-
-import { fade } from "astro:transitions";
 ---
 
 <Layout
-  title="Creative and versatile UI Designer/Developer _ "
-  subTitle="with 20 years experience on a variety of digital design projects including marketing websites, SASS apps, graphic design and design for print."
-  hasHeaderImg={true}
-  variant="vertical"
-  headerImgSrc={portImageUbi}>
+  title="Work Portfolio "
+  subTitle="20 years experience on a variety of digital design projects including marketing websites, SASS apps, graphic design and design for print."
+  hasHeaderImg={false}
+  variant="vertical">
   <main>
     <section>
-      <Divider
-        variant="section"
-        sectionNumber="01"
-        heading="Work"
-      />
       <section>
         <Divider
           variant="subSection"
@@ -50,57 +46,88 @@ import { fade } from "astro:transitions";
           class="link-card-grid">
           <Card
             title="ubisend"
+            alt="click to see"
             body="UI/UX DESIGN & DEVELOPMENT"
             href="/work/web-ubisend"
             imgSrc={portImageUbi}
           />
           <Card
             title="Mypinpad"
+            alt="click to see"
             body="UI/UX DESIGN & DEVELOPMENT"
             href="/work/web-mpp"
             imgSrc={portImageMpp}
           />
           <Card
             title="TextAnywhere"
+            alt="click to see"
             body="UI/UX DESIGN & DEVELOPMENT"
             href="/work/web-ta"
             imgSrc={portImageTA}
           />
           <Card
             title="Bon Voyage"
+            alt="click to see"
             body="UI/UX DESIGN & DEVELOPMENT"
             href="https://adbarnes.github.io/bon-voyage/"
             imgSrc={portImageBon}
           />
           <Card
             title="Revolution Performing Arts"
+            alt="click to see"
             body="UI/UX DESIGN & WORDPRESS DEVELOPMENT"
             href="https://revolutionpa.co.uk/"
             imgSrc={portImageRPA}
           />
           <Card
-            title="Jobsite"
-            body="UI/UX DESIGN & DEVELOPMENT"
-            href="https://adbarnes.github.io/job-search-site/public/index.html"
-            imgSrc={portImageJob}
+            title="Landing Page"
+            alt="click to see"
+            body="WEB DESIGN"
+            href="https://adbarnes.github.io/mock-landing/"
+            imgSrc={portImageLand}
           />
           <Card
             title="Vue Login Page"
-            body="UI/UX DESIGN & DEVELOPMENT"
+            alt="click to see"
+            body="WEB DESIGN "
             href="https://adbarnes.github.io/password-check/"
             imgSrc={portImageVue}
           />
           <Card
             title="Animated Landing Page"
-            body="UI/UX DESIGN & DEVELOPMENT"
+            alt="click to see"
+            body="WEB DESIGN"
             href="https://adbarnes.github.io/animated-landing-page/"
             imgSrc={portImageAlp}
           />
           <Card
             title="Jobsite"
-            body="UI/UX DESIGN & DEVELOPMENT"
+            alt="click to see"
+            body="UI/UX DESIGN"
             href="https://adbarnes.github.io/job-search-site/public/index.html"
             imgSrc={portImageJob}
+          />
+
+          <Card
+            title="Sign Up Page"
+            alt="click to see"
+            body="WEB DESIGN"
+            href="https://adbarnes.github.io/signup-form/"
+            imgSrc={portImageSign}
+          />
+          <Card
+            title="Coming Soon Page"
+            alt="click to see"
+            body="WEB DESIGN"
+            href="https://adbarnes.github.io/coming-soon-page/"
+            imgSrc={portImageSoon}
+          />
+          <Card
+            title="Pricing Page"
+            alt="click to see"
+            body="WEB DESIGN"
+            href="https://adbarnes.github.io/pricing-component-toggle/"
+            imgSrc={portImagePrice}
           />
         </ul>
       </section>
@@ -115,36 +142,42 @@ import { fade } from "astro:transitions";
           class="link-card-grid">
           <Card
             title="The Crucible"
+            alt="click to see"
             body="Poster design"
             href="#"
             imgSrc={portImageCru}
           />
           <Card
             title="Constellations"
+            alt="click to see"
             body="Poster design"
             href="#"
             imgSrc={portImageCons}
           />
           <Card
             title="Breathing Corpses"
+            alt="click to see"
             body="Poster design"
             href="#"
             imgSrc={portImageBc}
           />
           <Card
             title="A Midsummer Night's Dream"
+            alt="click to see"
             body="Poster design"
             href=""
             imgSrc={portImageMsnd}
           />
           <Card
             title="Improv Comedy"
+            alt="click to see"
             body="Poster design"
             href="#"
             imgSrc={portImageImpro}
           />
           <Card
             title="The Lost Presents"
+            alt="click to see"
             body="Poster design"
             href="#"
             imgSrc={portImageTlp}
