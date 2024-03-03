@@ -6,20 +6,27 @@ interface Props {
   body: string;
   href: string;
   imgSrc: ImageMetadata;
+  alt: string;
 }
 
-const { href, title, body, imgSrc } = Astro.props;
+const { href, title, body, imgSrc, alt } = Astro.props;
 ---
 
 <li class="link-card">
-  <a href={href}><Picture src={imgSrc} alt="" /></a>
-  <a href={href}>
-    <h2>
-      {title}
-    </h2>
-    <p>
-      {body}
-    </p>
+  <a href={href}
+    ><Picture
+      src={imgSrc}
+      alt={alt}
+      loading="lazy"
+    />
+    <span>
+      <h2>
+        {title}
+      </h2>
+      <p>
+        {body}
+      </p>
+    </span>
   </a>
 </li>
 <style>
@@ -27,15 +34,25 @@ const { href, title, body, imgSrc } = Astro.props;
     list-style: none;
     display: flex;
     flex-direction: column;
-  }
 
+  }
+  /*
   .link-card img {
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
+  */
 
-  .link-card > a {
+  .link-card a {
+    background-color: black;
+    color: aliceblue;
+    padding: 1rem;
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .link-card > span {
     background-color: black;
     color: aliceblue;
     padding: 1rem;
@@ -50,7 +67,7 @@ const { href, title, body, imgSrc } = Astro.props;
   p {
     margin-top: 0.5rem;
     margin-bottom: 0;
-  }
+  } */
   /* .link-card {
     list-style: none;
     display: flex;
