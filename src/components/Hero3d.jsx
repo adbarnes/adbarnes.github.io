@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Text3D, Center, Float } from "@react-three/drei";
+import { Text3D, Center, Float } from "@react-three/drei";
 
 function Sphere(props) {
   const ref = useRef();
@@ -16,6 +16,9 @@ function Sphere(props) {
 }
 
 export default function Counter() {
+  const currentYear = new Date().getFullYear();
+  const dateRange = `2003 - ${currentYear}`;
+
   return (
     <Canvas
       orthographic
@@ -70,7 +73,8 @@ export default function Counter() {
           scale={0.8}
           color={"#333a3f"}
         />
-
+      </Float>
+      <Float>
         <Sphere
           position={[4.5, 1, 0]}
           scale={0.5}
@@ -104,7 +108,7 @@ export default function Counter() {
           letterSpacing={-0.05}
           size={1}
           font="/Inter_Bold.json">
-          {`2003 - 2024`}
+          {dateRange}
           <meshBasicMaterial color={"#FF1E86"} />
         </Text3D>
       </Center>
