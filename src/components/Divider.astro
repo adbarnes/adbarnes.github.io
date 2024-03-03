@@ -15,9 +15,9 @@ const { sectionNumber, heading, variant } = Astro.props;
 
 <style>
   .container {
-    border-bottom: 3px solid #333;
-
-    span {
+    border-bottom: 3px solid var(--primary);
+    max-width: unset;
+    margin span {
       font-size: 1.5rem;
     }
     h2 {
