@@ -23,9 +23,9 @@ const currentPath = pathname.slice(1); // remove the first "/"
       >About</a
     >
     <a
-      href="/work"
-      class={currentPath === "work" ? "active" : ""}
-      >Work</a
+      href="/portfolio"
+      class={currentPath === "portfolio" ? "active" : ""}
+      >Portfolio</a
     >
   </div>
 </div>
@@ -55,7 +55,8 @@ const currentPath = pathname.slice(1); // remove the first "/"
     margin-right: 1.5rem;
   }
 
-  .nav-links a.active {
-    color: #ff1e86;
+  .nav-links a.active,
+  .nav-links a:hover {
+    color: var(--secondary);
   }
 </style>
