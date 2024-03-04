@@ -1,0 +1,41 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Link from "../../../components/Link.astro";
+
+import { Picture } from "astro:assets";
+
+import portImage from "../../../images/portfolio/graphic/port-graphic-improv-big.jpg";
+---
+
+<Layout
+  title="Improv Comedy Club"
+  subTitle="Poster design"
+  hasHeaderImg={false}
+  variant="vertical">
+  <main>
+    <section>
+      <Picture
+        class="img"
+        alt="Poster with title Improv Comedy Club with the group a of people on stage"
+        src={portImage}
+      />
+      <Link
+        href="/portfolio/#graphic-design"
+        text="Back to portfolio"
+      />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  img {
+    border: 1rem solid var(--primary);
+  }
+</style>

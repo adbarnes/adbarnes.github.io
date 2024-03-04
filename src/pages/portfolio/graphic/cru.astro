@@ -1,0 +1,41 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Link from "../../../components/Link.astro";
+
+import { Picture } from "astro:assets";
+
+import portImageCru from "../../../images/portfolio/graphic/port-graphic-crucible-big.jpg";
+---
+
+<Layout
+  title="The Crucible"
+  subTitle="Poster design"
+  hasHeaderImg={false}
+  variant="vertical">
+  <main>
+    <section>
+      <Picture
+        class="img"
+        alt="Poster with title The Crucible with bird flying up out of flames"
+        src={portImageCru}
+      />
+      <Link
+        href="/portfolio/#graphic-design"
+        text="Back to portfolio"
+      />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  img {
+    border: 1rem solid var(--primary);
+  }
+</style>
