@@ -22,6 +22,12 @@ const { text, href } = Astro.props;
     border-radius: 80px;
     padding: 1.5rem;
     margin: 1rem 0;
-    border: 1px solid var(--primary);
+    border: 2px solid var(--primary);
+  }
+
+  a.active,
+  a:hover {
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
   }
 </style>

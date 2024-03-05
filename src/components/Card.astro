@@ -35,18 +35,22 @@ const { href, title, body, imgSrc, alt } = Astro.props;
     display: flex;
     flex-direction: column;
   }
-
   .link-card a {
     background-color: var(--primary);
-    color: aliceblue;
+    color: white;
     padding: 1rem;
     text-decoration: none;
     height: 100%;
   }
 
+  .link-card a.active,
+  .link-card a:hover {
+    background-color: var(--secondary);
+  }
+
   .link-card > span {
-    background-color: black;
-    color: aliceblue;
+    background-color: var(--primary);
+    color: white;
     padding: 1rem;
     text-decoration: none;
   }

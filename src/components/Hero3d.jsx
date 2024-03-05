@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { useRef } from "react";
+import { Canvas } from "@react-three/fiber";
 import { Text3D, Center, Float } from "@react-three/drei";
 
 function Sphere(props) {
@@ -109,11 +109,9 @@ export default function Counter() {
           size={1}
           font="/Inter_Bold.json">
           {dateRange}
-          <meshBasicMaterial color={"#FF1E86"} />
+          <meshBasicMaterial color={"#E6006B"} />
         </Text3D>
       </Center>
-
-      {/* <OrbitControls enablePan={true} enableRotate={true} enableZoom={false} /> */}
     </Canvas>
   );
 }
