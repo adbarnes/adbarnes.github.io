@@ -51,17 +51,17 @@ const { title, subTitle, variant, headerImgSrc } = Astro.props;
 
   .hero-container {
     text-align: center;
-    padding: 6rem 3rem 3rem 3rem;
+    padding: 6rem 1rem 3rem 1rem;
 
     max-width: calc(1248px - 2rem);
     margin: auto;
 
     h1 {
       font-size: 5rem;
+      line-height: 100px;
       max-width: 1045px;
       margin-inline-start: auto;
       margin-inline-end: auto;
-      word-wrap: break-word;
     }
 
     .container {
@@ -74,6 +74,13 @@ const { title, subTitle, variant, headerImgSrc } = Astro.props;
     @media screen and (max-width: 769px) {
       .container {
         flex-direction: column;
+      }
+      .hero-container {
+        text-align: center;
+        padding: 6rem 3rem 3rem 3rem;
+
+        max-width: calc(1248px - 2rem);
+        margin: auto;
       }
     }
 
