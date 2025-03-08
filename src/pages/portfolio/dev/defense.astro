@@ -11,12 +11,14 @@ import Layout from "../../../layouts/Layout.astro";
 
 // Images
 import portImageDef from "../../../images/portfolio/dev/port-web-def.png";
-import portImageTaApp from "../../../images/portfolio/dev/port-web-ta-app.png";
+import portImageTaAppWiz from "../../../images/portfolio/dev/port-web-def-wiz.png";
+import portImageTaAppEmail from "../../../images/portfolio/dev/port-web-def-email.png";
+import portImageTaAppFig from "../../../images/portfolio/dev/port-web-def-fig.png";
 ---
 
 <Layout
   title="Defense.com"
-  subTitle="Designing, coding and maintaining web-based online applications, blogs, marketing websites. "
+  subTitle="Designing, coding and maintaining web application and marketing websites in a fast-paced, agile enviroment. "
   hasHeaderImg={true}
   variant="Hori"
   headerImgSrc={portImageDef}>
@@ -31,21 +33,29 @@ import portImageTaApp from "../../../images/portfolio/dev/port-web-ta-app.png";
       <div class="column">
         <Picture
           class="box"
-          src={portImageTaApp}
-          alt="Mypinpad website screenshot"
+          src={portImageTaAppWiz}
+          alt="Defenese website screenshot"
         />
       </div>
       <div class="column content">
-        <h2 class="title is-2">Design system</h2>
-        <p>
-          One of the larger tasks I undertook at Mypinpad was to implement a
-          Figma design system.
-        </p>
+        <h2 class="title is-2">New portal features</h2>
+        <p>UX/UI design and coding of partner invite feature</p>
         <ul>
-          <li>Reusable components with variations</li>
-          <li>Typography, Colour and Icon linked libraries</li>
-          <li>Advanced, usable prototypes</li>
-          <li>Synced with Storybook components</li>
+          <li>
+            Collaborated with stakeholders to gather business requirements,
+            ensuring the feature aligned with user and company needs.
+          </li>
+          <li>
+            Designed wireframes and interactive prototypes in Figma, collecting
+            stakeholder feedback and iterating to refine the user experience.
+          </li>
+          <li>
+            Developed the feature using Ruby, HTML, CSS, and JavaScript.
+            <li>
+              Tested and refined the implementation ensuring seamless
+              integration with the existing application.
+            </li>
+          </li>
         </ul>
       </div>
     </div>
@@ -59,24 +69,80 @@ import portImageTaApp from "../../../images/portfolio/dev/port-web-ta-app.png";
     transition={{ delay: 0.5, duration: 0.5 }}>
     <div class="columns reverse-columns">
       <div class="column content">
-        <h2 class="title is-2">
-          Prototype and development of branding configurator
-        </h2>
+        <h2 class="title is-2">Phishing email templates and landing pages</h2>
         <p>
-          UX/UI design for tool for customers to brand their WL application.
+          Designed and implemented compliant and responsive phishing email
+          templates and landing pages
         </p>
         <ul>
-          <li>Prototyping and design in Figma</li>
-          <li>LIT Storybook components</li>
-          <li>First product to be released to customers</li>
+          <li>
+            Liaised with stakeholders to define requirements, ensuring phishing
+            email templates and landing pages.
+          </li>
+          <li>
+            Designed wireframes and prototypes in Figma, refining layouts and
+            content based on stakeholder feedback.
+          </li>
+          <li>
+            Developed email-compliant HTML templates and responsive landing
+            pages, ensuring optimal rendering across devices and email clients.
+          </li>
+          <li>
+            Tested and integrated templates into the web application using
+            MailHog, ensuring seamless functionality and user engagement
+            tracking.
+          </li>
         </ul>
       </div>
       <div class="column">
         <Picture
           class="box"
-          src={portImageTaApp}
-          alt="Workflow builder interface"
+          src={portImageTaAppEmail}
+          alt="Email phishing interface"
         />
+      </div>
+    </div>
+  </motion.section>
+
+  <motion.section
+    client:load
+    className="section-is-large"
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.5, duration: 0.5 }}>
+    <div class="columns">
+      <div class="column">
+        <Picture
+          class="box"
+          src={portImageTaAppFig}
+          alt="Defense website screenshot"
+        />
+      </div>
+      <div class="column content">
+        <h2 class="title is-2">Marketing websites and blogs</h2>
+        <p>
+          Worked with marketing teams to implement new features, blogs, and
+          pages while optimizing performance, SEO, and user experience.
+        </p>
+        <ul>
+          <li>
+            Collaborated with multiple marketing teams to develop and launch new
+            website features, blogs, and landing pages.
+          </li>
+          <li>
+            Designed and implemented SEO improvements, enhancing search
+            visibility and organic traffic.
+          </li>
+          <li>
+            Optimized website performance, improving load times and user
+            experience.
+          </li>
+          <li>
+            Ensured seamless integration of new content and features while
+            maintaining brand consistency.
+          </li>
+        </ul>
       </div>
     </div>
   </motion.section>
@@ -89,42 +155,50 @@ import portImageTaApp from "../../../images/portfolio/dev/port-web-ta-app.png";
     <div class="content">
       <ul>
         <li>
-          Designed and coded TextAnywhere's web application UI and marketing
-          websites visited daily by 1000's of users.
+          Design, develop, and implement front-end solutions in MVC applications
+          using Ruby, JS, HTML, CSS and Figma.
         </li>
 
         <li>
-          Created custom responsive WordPress themes for multiple
-          TextAnywhere/GreenText blogs.
+          Develop responsive designs for mobile and desktop applications,
+          marketing sites and email templates.
         </li>
         <li>
-          Designed and coded various email campaigns, sent to over 15,000
-          customers.
+          Collaborate with back-end developers to deliver end-to-end solutions.
         </li>
         <li>
-          Wireframed and prototyped various projects using Figma/Adobe XD.
+          Implement and promote web standards, accessibility guidelines, and
+          best practices.
         </li>
         <li>
-          Designed various marketing materials, including product brochure PDFs.
-        </li>
-        <li>Created new company logo and brand colours.</li>
-
-        <li>
-          Created 'White Label' branded versions of the TA application for 20+
-          businesses, liaising with clients and following brand guidelines.
+          Work closely with multi internal and external teams and stakeholders
+          to design and develop features and product updates.
         </li>
         <li>
-          Adhered to web standards, compatibility and best practice when
-          designing websites.
-        </li>
-        <li>
-          Worked closely in conjunction with the development team, checking
-          design and UI consistency.
+          Create figma prototypes and wireframes for application UI, marketing
+          collateral, web pages and logo designs.
         </li>
 
         <li>
-          Setup and implemented Google Analytics. Setup reports and analysed GA
-          data to improve website usability and performance.
+          Use Gitlab workflows, version control, and collaboration, ensuring
+          efficient code management and team productivity.
+        </li>
+        <li>
+          Proactively make suggestions and implement improvements to current
+          UX/UI.
+        </li>
+        <li>
+          Work closely with marketing by communicating changes and providing
+          designs for use in collaterals.
+        </li>
+        <li>
+          Coordinate work with product managers and stakeholders using
+          Monday.com.
+        </li>
+        <li>
+          Responsible for participating in and contributing to the Agile
+          development process, alternating between development and marketing
+          three-week sprints.
         </li>
       </ul>
     </div>
