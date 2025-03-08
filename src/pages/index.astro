@@ -6,7 +6,7 @@ import Link from "../components/Link.astro";
 
 import portImageUbi from "../images/portfolio/dev/port-web-ubi.png";
 import portImageMpp from "../images/portfolio/dev/port-web-mpp.png";
-import portImageTA from "../images/portfolio/dev/port-web-ta.png";
+import portImageDef from "../images/portfolio/dev/port-web-def.png";
 
 import portImageCru from "../images/portfolio/graphic/port-graphic-cru.jpg";
 import portImageCons from "../images/portfolio/graphic/port-graphic-cons.jpg";
@@ -51,9 +51,9 @@ import { fade } from "astro:transitions";
           to detail.
         </p>
         <p>
-          I am currently working at ubisend, as a <span
-            class="has-text-weight-bold">UX/UI Developer</span
-          >, working on their AI chatbot platform.
+          I am currently working at Defense.com, as a <span
+            class="has-text-weight-bold">Web Designer</span
+          >, working on their cybersecurity platform and marketing websites.
         </p>
       </div>
       <section>
@@ -121,6 +121,13 @@ import { fade } from "astro:transitions";
           role="list"
           class="link-card-grid">
           <Card
+            title="Defense"
+            alt="click to see"
+            body="WEB UI/UX DESIGN & DEVELOPMENT"
+            href="/portfolio/dev/defense"
+            imgSrc={portImageDef}
+          />
+          <Card
             title="ubisend"
             alt="ubisend portfolio page"
             body="UI/UX DESIGN & DEVELOPMENT"
@@ -133,13 +140,6 @@ import { fade } from "astro:transitions";
             body="UI/UX DESIGN & DEVELOPMENT"
             href="/portfolio/dev/mpp"
             imgSrc={portImageMpp}
-          />
-          <Card
-            title="TextAnywhere"
-            alt="TextAnywhere portfolio page"
-            body="UI/UX DESIGN & DEVELOPMENT"
-            href="/portfolio/dev/ta"
-            imgSrc={portImageTA}
           />
         </ul>
         <Link
@@ -192,7 +192,11 @@ import { fade } from "astro:transitions";
     />
     <section>
       <table>
-        <tr><td>ubisend</td><td>UI/UX Developer</td><td>Oct 2022 -</td></tr>
+        <tr><td>Defense.com</td><td>Web Designer</td><td>Sep 2024 -</td></tr>
+        <tr
+          ><td>ubisend</td><td>UI/UX Developer</td><td>Oct 2022 - Sep 2024</td
+          ></tr
+        >
         <tr
           ><td>mypinpad</td><td>UI/UX Developer</td><td
             >Nov 2020 - Oct 2022
@@ -265,7 +269,6 @@ import { fade } from "astro:transitions";
     background-color: var(--primary);
     border-radius: 80px;
     color: white;
-    padding: 1rem;
+    padding: 1rem 1.5rem 1.2rem;
     margin: 1rem;
-  }
 </style>
