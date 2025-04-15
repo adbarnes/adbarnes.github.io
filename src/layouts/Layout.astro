@@ -11,9 +11,11 @@ interface Props {
   hasHeaderImg: boolean;
   variant: string;
   headerImgSrc?: ImageMetadata;
+  showTechLogos?: boolean;
 }
 
-const { title, subTitle, hasHeaderImg, headerImgSrc, variant } = Astro.props;
+const { title, subTitle, hasHeaderImg, headerImgSrc, variant, showTechLogos } =
+  Astro.props;
 ---
 
 <!doctype html>
@@ -92,6 +94,7 @@ const { title, subTitle, hasHeaderImg, headerImgSrc, variant } = Astro.props;
       hasHeaderImg={hasHeaderImg}
       headerImgSrc={headerImgSrc}
       variant={variant}
+      showTechLogos={showTechLogos}
     />
     <main>
       <slot />

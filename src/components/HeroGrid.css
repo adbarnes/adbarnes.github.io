@@ -6,6 +6,7 @@
   padding: 0.5rem;
   overflow: hidden;
   border-radius: 1rem;
+
 }
 
 .grid-item {
@@ -99,4 +100,11 @@
   background-size: contain;
   transform-origin: center;  /* Center or adjust as needed */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='48' fill='none'%3E%3Cpath fill='%23D9D9D9' d='m24.215 0 24 48h-48l24-48Z'/%3E%3C/svg%3E");
+}
+
+@media screen and (min-width: 1216px) {
+  .grid-container { 
+    width: 576px;
+    overflow: none;
+  }
 }

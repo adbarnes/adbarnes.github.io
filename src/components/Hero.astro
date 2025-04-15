@@ -31,9 +31,16 @@ interface Props {
   subTitle: string;
   variant: string;
   headerImgSrc?: ImageMetadata;
+  showTechLogos?: boolean;
 }
 
-const { title, subTitle, variant, headerImgSrc } = Astro.props;
+const {
+  title,
+  subTitle,
+  variant,
+  headerImgSrc,
+  showTechLogos = true,
+} = Astro.props;
 ---
 
 <section class="hero">
@@ -57,25 +64,27 @@ const { title, subTitle, variant, headerImgSrc } = Astro.props;
             transition={{ duration: 0.4, ease: "easeOut", delay: 0.4 }}>
             {subTitle}
           </motion.h2>
-          <motion.ul
-            client:load
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut", delay: 0.4 }}
-            className="tech-logos mb-3">
-            {
-              logos.map((logo) => (
-                <li>
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={48}
-                    height={48}
-                  />
-                </li>
-              ))
-            }
-          </motion.ul>
+          {
+            showTechLogos && (
+              <motion.ul
+                client:load
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease: "easeOut", delay: 0.4 }}
+                className="tech-logos mb-3">
+                {logos.map((logo) => (
+                  <li>
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={48}
+                      height={48}
+                    />
+                  </li>
+                ))}
+              </motion.ul>
+            )
+          }
         </div>
         <div class="column is-half-desktop">
           {
