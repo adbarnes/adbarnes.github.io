@@ -1,6 +1,30 @@
 ---
+import { Image } from "astro:assets";
 import { Picture } from "astro:assets";
-import Hero3d from "./Hero3d";
+import { motion } from "framer-motion";
+import HeroGrid from "./HeroGrid";
+
+import htmlLogo from "../../src/images/logo-html.svg";
+import reactLogo from ".../../src/images/logo-react.svg";
+import cssLogo from "../../src/images/logo-css.svg";
+import figmaLogo from "../../src/images/logo-figma.svg";
+import wordpressLogo from "../../src/images/logo-wp.svg";
+import jsLogo from "../../src/images/logo-js.svg";
+import bootstrapLogo from "../../src/images/logo-boot.svg";
+import githubLogo from "../../src/images/logo-github.svg";
+import dockerLogo from "../../src/images/logo-docker.svg";
+
+const logos = [
+  { src: htmlLogo, alt: "HTML5" },
+  { src: reactLogo, alt: "React" },
+  { src: cssLogo, alt: "CSS3" },
+  { src: figmaLogo, alt: "Figma" },
+  { src: wordpressLogo, alt: "WordPress" },
+  { src: jsLogo, alt: "JavaScript" },
+  { src: bootstrapLogo, alt: "Bootstrap" },
+  { src: githubLogo, alt: "GitHub" },
+  { src: dockerLogo, alt: "Docker" },
+];
 
 interface Props {
   title: string;
@@ -12,56 +36,133 @@ interface Props {
 const { title, subTitle, variant, headerImgSrc } = Astro.props;
 ---
 
-<div class="hero-container">
-  <h1 class="has-text-weight-semibold">
-    {title}
-  </h1>
-  {
-    variant === "vertical" ? (
-      <>
-        {headerImgSrc && (
-          <div class="three">
-            <Hero3d client:load />
-          </div>
-        )}
-        <p>{subTitle}</p>
-      </>
-    ) : (
-      <div class="container">
-        {headerImgSrc && (
-          <Picture
-            class="intro-img box"
-            src={headerImgSrc}
-            alt=""
-          />
-        )}
-        <p>{subTitle}</p>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-desktop is-vcentered is-variable is-8">
+        <div class="column is-half-desktop has-text-centered-touch">
+          <motion.h1
+            client:load
+            className="title is-1 has-text-weight-semibold"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}>
+            {title}
+          </motion.h1>
+          <motion.h2
+            client:load
+            className="subtitle is-4 my-5"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.4 }}>
+            {subTitle}
+          </motion.h2>
+          <motion.ul
+            client:load
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.4 }}
+            className="tech-logos mb-3">
+            {
+              logos.map((logo) => (
+                <li>
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={48}
+                    height={48}
+                  />
+                </li>
+              ))
+            }
+          </motion.ul>
+        </div>
+        <div class="column is-half-desktop">
+          {
+            variant === "vertical" && headerImgSrc ? (
+              <motion.div
+                client:load
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 25,
+                  duration: 0.4,
+                  delay: 0.2,
+                }}>
+                <Picture
+                  class="intro-img box"
+                  src={headerImgSrc}
+                  alt=""
+                />
+              </motion.div>
+            ) : (
+              <HeroGrid
+                client:load
+                variant={variant}
+              />
+            )
+          }
+        </div>
       </div>
-    )
-  }
-</div>
+    </div>
+  </div>
+</section>
 
 <style>
   .three {
     width: 100%;
     height: 600px;
-    margin: 2rem 0;
+    margin: 2rem 0 4rem 0;
     padding: 1rem 0;
+  }
+
+  .intro-img {
+    max-width: 360px;
+    margin-left: 3rem;
+    margin-right: auto;
+
+    margin-bottom: -10rem;
+  }
+
+  .hero {
+    margin-top: 60px;
+    background-color: #333a3f;
+    background-image: url("../../src/images/hero-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  .hero-body {
+    max-width: calc(1248px);
+    margin: auto;
+    padding: 2.5rem 1rem;
+  }
+
+  .title,
+  .subtitle {
+    color: white;
+  }
+
+  .title {
+    line-height: 1;
+    max-width: 528px;
   }
 
   .hero-container {
     text-align: center;
     padding: 6rem 1rem 3rem 1rem;
-
-    max-width: calc(1248px - 2rem);
+    max-width: calc(800px - 2rem);
     margin: auto;
 
     h1 {
       font-size: 5rem;
-      line-height: 100px;
-      max-width: 1045px;
-      margin-inline-start: auto;
-      margin-inline-end: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
     }
 
     .container {
@@ -90,14 +191,61 @@ const { title, subTitle, variant, headerImgSrc } = Astro.props;
       max-width: 100%;
       object-fit: cover;
       display: flex;
-      margin: auto;
+      margin: 1rem auto;
     }
   }
 
   p {
     margin: auto;
-    max-width: 880px;
+    max-width: 950px;
     font-size: 2.5rem;
     padding: 1rem;
+  }
+
+  .tech-logos {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0;
+  }
+
+  .tech-logos img {
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .tech-logos li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .tech-logos {
+      justify-content: center;
+    }
+
+    .intro-img {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: -10rem;
+      margin-top: 1rem;
+    }
+
+    h1 {
+      margin: auto;
+    }
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1215px) {
+    .intro-img {
+      margin-top: 3rem;
+    }
+    .title {
+      font-size: 2.5rem;
+      max-width: 528px;
+    }
   }
 </style>
